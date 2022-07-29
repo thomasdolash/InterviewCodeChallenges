@@ -8,25 +8,25 @@ namespace Submarine {
         [Fact]
         public void Part1_BasicTest() {
             Submarine s = new Submarine(unitTestData);
-            Assert.Equal(150, s.CurrentTrajectoryV1);
+            Assert.Equal(150, s.Answer_Part1);
         }
 
         [Fact]
         public void Part1_FullTest() {
             Submarine s = new Submarine();
-            Assert.Equal(1635930, s.CurrentTrajectoryV1);
+            Assert.Equal(1635930, s.Answer_Part1);
         }
 
         [Fact]
         public void Part2_BasicTest() {
             Submarine s = new Submarine(unitTestData);
-            Assert.Equal(900, s.CurrentTrajectoryV2);
+            Assert.Equal(900, s.Answer_Part2);
         }
 
         [Fact]
         public void Part2_FullTest() {
             Submarine s = new Submarine();
-            Assert.Equal(1781819478, s.CurrentTrajectoryV2);
+            Assert.Equal(1781819478, s.Answer_Part2);
         }
     }
 }
