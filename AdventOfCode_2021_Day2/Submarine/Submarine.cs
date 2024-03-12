@@ -25,13 +25,19 @@
         /// </summary>
         /// <param name="Instructions"></param>
         public Submarine(string[] Instructions) {
-            // Iterate upon the instruction set
 
+            // Part 1 calculation
             ProcessInstructions_Simple(Instructions);
+
+            // Part 2 calculation
             ProcessInstructions_Complex(Instructions);
 
         }
 
+        /// <summary>
+        /// Calculation for simple submarine navigation without aim direction
+        /// </summary>
+        /// <param name="Instructions"></param>
         private void ProcessInstructions_Simple(string[] Instructions)
         {
             // Submarine depth
@@ -39,6 +45,7 @@
             // Distance traveled in the horizontal plane
             int horizontalDistance = 0;
 
+            // Iterate upon the instruction set
             foreach (string Instruction in Instructions)
             {
                 // Initialize our components with the input
@@ -68,12 +75,17 @@
             this.Answer_Part1 += depth * horizontalDistance;
         }
 
+        /// <summary>
+        /// Calculation for submarine navigation including aim direction
+        /// </summary>
+        /// <param name="Instructions"></param>
         private void ProcessInstructions_Complex(string[] Instructions)
         {
             int depth = 0;
             int aim = 0;
             int horizontalDistance = 0;
 
+            // Iterate upon the instruction set
             foreach (string Instruction in Instructions)
             {
                 // Initialize our components with the input
@@ -103,17 +115,6 @@
             }
 
             this.Answer_Part2 = depth * horizontalDistance;
-        }
-
-
-        /// <summary>
-        /// Process our inbound instruction in order to calculate our new depth and distance
-        /// </summary>
-        /// <param name="Instruction"></param>
-        private void ProcessInstruction(string Instruction)
-        {
-            
-
         }
 
 
